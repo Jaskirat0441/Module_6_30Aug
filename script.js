@@ -85,6 +85,8 @@ if(tnC) {
     
 } else {
     document.getElementById("tnC-invalid").style.display = "block";
+    document.getElementById("tnc_success").style.color = "#212529";
+
     valid= false
     // document.getElementById("invalid-tnC").style.display = "block";
     // document.getElementById("tnc_success").style.color = "#dc3545";
