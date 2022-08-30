@@ -1,0 +1,17 @@
+body{
+    background-color: #dfdfdf;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+.reg_form{
+    width: 70vw;
+    background-image: linear-gradient(to right, #646566 , #c3c4c5);
+    padding: 6px 30px;
+    /* background-color: #a19d9d; */
+    border-radius:14px;
+    margin: auto;
+}
+
+.footer_data{
+    color: #646566;
+}

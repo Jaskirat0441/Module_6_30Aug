@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                Registration Form
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+           </div>
+      </nav>
+      <!--  -->
+    <div class="container my-4">
+        <form class="row reg_form g-3" id="reg-form">
+          <h1 class="display-3 text-center reg-heading mt-3">Registration Form</h1>
+        <!-- first Name -->
+        <div class="col-md-6">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" placeholder="First Name" />
+            <div class="valid-feedback" id="valid-firstname">Looks good!</div>
+            <div class="invalid-feedback" id="invalid-firstname">
+              Please enter a valid first name.
+            </div>
+          </div> 
+          <!-- Last name -->
+          <div class="col-md-6">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name"  placeholder="Last Name"/>
+            <div class="valid-feedback" id="valid-lastname">Looks good!</div>
+            <div class="invalid-feedback" id="invalid-lastname">
+              Please enter a valid last name.
+            </div>
+          </div>
+          <!-- email -->
+          <div class="col-md-6">
+            <label for="reg_email" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="reg_email" aria-describedby="inputGroupPrepend" placeholder="Email" >
+              <div class="valid-feedback" id="valid-reg_email">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" id="invalid-reg_email">
+                Please enter a valid email.
+              </div>
+            </div>
+          </div>
+          <!-- phone number -->
+          <div class="col-md-6">
+            <label for="reg_phone" class="form-label">Phone Number</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend_phone">91</span>
+                <input type="number" class="form-control" id="reg_phone"  aria-describedby="inputGroupPrepend_phone"  placeholder="Phone Number">
+                <div class="valid-feedback" id="valid-reg_phone">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" id="invalid-reg_phone">
+                  Please enter a valid Phone Number.
+                </div>
+              </div>
+          </div>
+          <!-- batch number -->
+          <div class="col-md-6">
+            <label for="batch_number" class="form-label">Batch No</label>
+            <select class="form-select" id="batch_number">
+              <option value="None" selected>Select Batch No ...</option>
+              <option value="1 ">1 </option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              </select>
+              <div class="invalid-feedback" id="invalid-batch">
+                Please select  a valid Batch No.
+              </div>
+              <div class="valid-feedback" id="valid-batch">
+                Looks good!
+              </div>
+              </div> 
+              <!-- module number -->
+              <div class="col-md-6">
+                <label for="module_number" class="form-label">Current Module </label>
+                <select class="form-select" id="module_number">
+                  <option value="None" selected>Select Current Module ...</option>
+                  <option value="5 ">5 </option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  </select>
+                  <div class="invalid-feedback" id="invalid-module">
+                    Please select  a valid Module No.
+                  </div>
+                  <div class="valid-feedback" id="valid-module">
+                    Looks good!
+                  </div>
+                  </div>
+                  <!-- t&c -->
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="tnC">
+                      <label class="form-check-label" id="tnc_success" for="tnC">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback" id="tnC-invalid">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- submit btn -->
+                  <div class="col-12 text-center mb-3">
+                    <button class="btn btn-dark" type="button" onclick="validate_reg_form()">Submit form</button>
+                  </div>
+              </form>
+          </div>
+
+          <footer class="spacer-y-3 bg-dark p-4 text-center align-center">
+            <div class="container">
+            <div class="col text-center footer_data">
+              <span class="text-center">Made By J.S Copyright@ Registration Form</span>
+            </div>
+            </div>
+            </footer>
+                
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
